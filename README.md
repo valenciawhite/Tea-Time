@@ -1,6 +1,6 @@
 # Tea Time
 
-! [tea time banner] (/src/Assets/tea-time-banner.png)
+! [tea time banner] (../Assets/tea-time-banner.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
