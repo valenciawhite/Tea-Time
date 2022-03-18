@@ -11,7 +11,7 @@ I'm building a site that makes finding tea shops and café's easier for all the 
 ## Work In Progress
 
 I am currently working on this alongside being a full-time bootcamp student, so prioritizing time is of upmost importance.
-With that being said, I will update Tea Time as often as I can.
+With that being said, I will update Tea Time as often as time allows.
 
 ---
 
