@@ -1,6 +1,7 @@
 function Header(props){
     return (
         <>
+       
        {/* const headerName = "Tea Time";
     const [subHeader, setSubHeader] = useState("Discover local tea shops near you.");
 
