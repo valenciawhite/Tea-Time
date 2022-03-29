@@ -1,0 +1,274 @@
+{
+    "teashops": [
+      {
+        "id": 1,
+        "city": "New York",
+        "name": "Harney & Sons SoHo",
+        "address": "433 Broome St, New York, NY 10013",
+        "star": "4.5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/9VMTBDPVvDtSMznEPCfexg/o.jpg"
+      },
+      {
+        "id": 2,
+        "city": "New York",
+        "name": "Té Company",
+        "address": "163 W 10th St, New York, NY 10014",
+        "star": "5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/R38jzlrzjYQ4bifn38tFHQ/o.jpg"
+      },
+      {
+        "id": 3,
+        "city": "New York",
+        "name": "McNulty's Tea & Coffee Co",
+        "address": "109 Christopher St, New York, NY 10014",
+        "star": "4.5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/zaKZjXDYpCz-Sey0andzMQ/o.jpg"
+      },
+      {
+        "id": 4,
+        "city": "New York",
+        "name": "T Shop",
+        "address": "247 Elizabeth St, New York, NY 10012",
+        "star": "5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/StDMFkEkFPyOchiDjncm6Q/o.jpg"
+      },
+      {
+        "id": 5,
+        "city": "New York",
+        "name": "Kettl",
+        "address": "73 Skillman Ave, Brooklyn, NY 11211",
+        "star": "5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/FDdywzhVg43ep43TIQx6mg/o.jpg"
+      },
+      {
+        "id": 6,
+        "city": "Chicago",
+        "name": "The Coffee & Tea Exchange",
+        "address": "3311 N Broadway, Chicago, IL 60657",
+        "star": "4.5",
+        "price": "$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/aifmmwCgC3kZ9sXMj6uPTw/o.jpg"
+      },
+      {
+        "id": 7,
+        "city": "Chicago",
+        "name": "Hugo Tea Space",
+        "address": "1816 N Milwaukee Ave, Chicago, IL 60647",
+        "star": "5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/AD20tCzdbW8Z7URd5Q3hmA/o.jpg"
+      },
+      {
+        "id": 8,
+        "city": "Chicago",
+        "name": "TeaGschwendner",
+        "address": "1160 N State St, Chicago, IL 60610",
+        "star": "4.5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/MWeOBvBvnYoRp9d7pxpmAw/o.jpg"
+      },
+      {
+        "id": 9,
+        "city": "Chicago",
+        "name": "Coffee Tree & Tea Leaves",
+        "address": "3752 N Broadway St, Chicago, IL 60613",
+        "star": "5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/gcvXX9Y_Tu9uN9l4CWsLjw/o.jpg"
+      },
+      {
+        "id": 10,
+        "city": "Chicago",
+        "name": "Portage Park Tea",
+        "address": "5741 W Irving Park Rd, Chicago, IL 60634",
+        "star": "5",
+        "price": "$$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/E5jAuppTZ_84uDVnbrgm8g/o.jpg"
+      },
+      {
+        "id": 11,
+        "city": "Atlanta",
+        "name": "The Ginger Room",
+        "address": "61 Roswell St, Alpharetta, GA 30009",
+        "star": "4.5",
+        "price": "$$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/rvP9xzaVA86nQFtbKaW3IQ/o.jpg"
+      },
+      {
+        "id": 12,
+        "city": "Atlanta",
+        "name": "Jayida Ché Tea Spot",
+        "address": "749 Moreland Ave, Atlanta, GA 30316",
+        "star": "5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/n_GJ-yL11W2gkhrK49Y_Dg/o.jpg"
+      },
+      {
+        "id": 13,
+        "city": "Atlanta",
+        "name": "Just Add Honey Tea Company",
+        "address": "684 John Wesley Dobbs Ave NE, Atlanta, GA 30312",
+        "star": "4.5",
+        "price": "$$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/7Ctq8Fv4qnboOLtBZ2fdHg/o.jpg"
+      },
+      {
+        "id": 14,
+        "city": "Atlanta",
+        "name": "ZenTea",
+        "address": "5356 Peachtree Rd, Chamblee, GA 30341",
+        "star": "4.5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/ta1s0DigmjUnB8xoLWHqzA/o.jpg"
+      },
+      {
+        "id": 15,
+        "city": "Atlanta",
+        "name": "Dr. Bombay's Underwater Tea Party",
+        "address": "1645 Mclendon Ave NE, Atlanta, GA 30307",
+        "star": "4",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/qWOXXRSEFJ3C8s5bw0rBHw/o.jpg"
+      },
+      {
+        "id": 16,
+        "city": "Houston",
+        "name": "Path Of Tea",
+        "address": "2340 W Alabama St, Houston, TX 77098",
+        "star": "4.5",
+        "price": "$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/8bYE_p5aUfwpP3kRXCQe7w/o.jpg"
+      },
+      {
+        "id": 17,
+        "city": "Houston",
+        "name": "Tea Sip",
+        "address": "321 W 19th St, Houston, TX 77008",
+        "star": "4.5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/YXWnIHTju4hL6FzO51_rCg/o.jpg"
+      },
+      {
+        "id": 18,
+        "city": "Houston",
+        "name": "Ten Yen Tea & Herbs",
+        "address": "10804 Bellaire Blvd, Houston, TX 77072",
+        "star": "4.5",
+        "price": "$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/t0r_GTCJdGgf0tBfeMT87A/o.jpg"
+      },
+      {
+        "id": 19,
+        "city": "Houston",
+        "name": "Tea for Two Tea Room",
+        "address": "8475 Hwy 6 N, Houston, TX 77095",
+        "star": "4",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/C-BSI1MLjjcUej8I_dPAJg/o.jpg"
+      },
+      {
+        "id": 20,
+        "city": "Houston",
+        "name": "McHugh Tea",
+        "address": "5305 Bissonnet St, Bellaire, TX 77401",
+        "star": "4",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/K-u70jDGL-vb6fT_d-8Tig/o.jpg"
+      },
+      {
+        "id": 21,
+        "city": "San Francisco",
+        "name": "Aroma Tea Shop",
+        "address": "302 6th Ave, San Francisco, CA 94118",
+        "star": "4",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/a-QOTXVSygCKpAW3iq6N_g/o.jpg"
+      },
+      {
+        "id": 22,
+        "city": "San Francisco",
+        "name": "Red Blossom Tea Company",
+        "address": "831 Grant Ave, San Francisco, CA 94108",
+        "star": "4.5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/g5YF2460OMasP_WOcRuOVw/o.jpg"
+      },
+      {
+        "id": 23,
+        "city": "San Francisco",
+        "name": "Song Tea & Ceramics",
+        "address": "2120 Sutter St, San Francisco, CA 94115",
+        "star": "5",
+        "price": "$$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/CX1VVRk3zHav2ilMiJt4Eg/o.jpg"
+      },
+      {
+        "id": 24,
+        "city": "San Francisco",
+        "name": "Lovejoy's Tea Room",
+        "address": "1351 Church St, San Francisco, CA 94114",
+        "star": "4.5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/og5a6xZc1NAQIIfeeDaIuQ/o.jpg"
+      },
+      {
+        "id": 25,
+        "city": "San Francisco",
+        "name": "Japanese Tea Garden",
+        "address": "75 Hagiwara Tea Garden Dr, San Francisco, CA 94118",
+        "star": "4",
+        "price": "$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/LFkZR1ryGLWar2eFkT4TxA/o.jpg"
+      },
+      {
+        "id": 26,
+        "city": "Seattle",
+        "name": "Friday Afternoon",
+        "address": "4228 Stone Way N, Seattle, WA 98103",
+        "star": "5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/CvLz1hR74AkTQI_-JUGygg/o.jpg"
+      },
+      {
+        "id": 27,
+        "city": "Seattle",
+        "name": "Steepologie Teas",
+        "address": "3420 Fremont Ave N, Seattle, WA 98103",
+        "star": "4",
+        "price": "$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/97_s4m9sRoAfB0FixRCZSw/o.jpg"
+      },
+      {
+        "id": 28,
+        "city": "Seattle",
+        "name": "Perennial Tea Room",
+        "address": "1910 Post Aly, Seattle, WA 98101",
+        "star": "4.5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/scRq_KMjncJ2lAB2BL2TkQ/o.jpg"
+      },
+      {
+        "id": 29,
+        "city": "Seattle",
+        "name": "Floating Leaves Tea",
+        "address": "1704 NW Market St, Seattle, WA 98107",
+        "star": "5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/NEyvQd9rpIA8LDU2Y8_nYQ/o.jpg"
+      },
+      {
+        "id": 30,
+        "city": "Seattle",
+        "name": "MarketSpice",
+        "address": "85A Pike St, Seattle, WA 98101",
+        "star": "4.5",
+        "price": "$$",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/I95QshhAH6nZGlCWHEYtCQ/o.jpg"
+      }
+    ]
+  }
