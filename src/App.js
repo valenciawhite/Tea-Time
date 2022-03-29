@@ -1,39 +1,19 @@
 import './App.css';
 import Header from './Header';
 import {useState} from 'react'; 
-// import Clickable from './Clickable';
-// import { API_BASE, BEARER_TOKEN } from "./config";
-// import queryString from 'query-string'
+import {useJsApiLoader, GoogleMap} from '@react-google-maps/api'
 
-
-
-
-function App() {
+const center = {lat:40.730610 , lng:-73.935242}
+function App(){
   const headerName = "Tea Time";
   const [subHeader, setSubHeader] = useState("Discover local tea shops near you.");
-//  const API_BASE = 'https://api.yelp.com/v3';
+  const {isLoaded} = useJsApiLoader({
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+  })
 
-// //GET RID OF. SEND TO BACKEND
-// const BEARER_TOKEN='ZnAtW8RCv1mLiVW5ARhe_n5XooOvLR7t7tuAWTimm4Qil952jcOgwaQkNkHjipYlU6T1N8zPFY7EC7r_-sg5tUxf-E97uLAFgrvpeMULjVq3uTn2LunW81ugZtVBYnYx';
+  // if (!isLoaded){
+  //   return </>
 
-  // const [photos, setPhotos] = useState([]);
-
-  // useEffect(function(){
-  //     fetch('API_BASE')
-  //     .then(response => response.json())
-  //     .then(data => console.log(data));
-  //   }, []);
-
-  //     function get(path, queryParams){
-  //       const query= queryString.stringify(queryParams);
-  
-  //     return fetch `$(API_BASE)${path}?${query}`, {
-  //         headers:{
-  //             Authrization: `Bearer ${BEARER_TOKEN}`,
-  //             Origin: 'localhost',
-  //             withCredentials: true,
-  //         }
-  //     }, console.log("i work!");
   // }
 
   function SearchBttn(){
@@ -59,8 +39,14 @@ function App() {
         />)} */}
       </ul>
       </header>
+
+      <GoogleMap center={center} 
+      zoom={15} 
+      mapContainerStyle={{width: '100%', height: '100%'}}>
+        
+      </GoogleMap>
     </div>
   );
-}
+     }
 
-export default App;
+export default App
