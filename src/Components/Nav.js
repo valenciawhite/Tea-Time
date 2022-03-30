@@ -2,8 +2,8 @@ import reactRouterDom from 'react-router-dom';
 import './App.css';
 import { Link } from 'react-router-dom';
 
-function Nav() {
-
+function Nav({teas}) {
+console.log(teas)
   const navStyle = {
     color:'white'
   };
