@@ -1,12 +1,15 @@
-import {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import About from "./About";
 import Search from "./Search";
 import TeaList from "./TeaList";
 import TeaReviewForm from "./TeaReviewForm";
 
 function TeaPage() {
-  const baseUrl = 'http://localhost:3000/teashops';
+  const baseUrl = 'http://localhost:3000/teas';
   const [teas, setTeas] = useState([])
+  const [query, setQuery] = useState("")
+
+useEffect(fetchTeas, []);
 
   function fetchTeas(){
     fetch(baseUrl)
@@ -14,14 +17,17 @@ function TeaPage() {
     .then(data => setTeas(data))
   }
 
-  useEffect(fetchTeas, [])
+  const filterTeas = teas.filter((tea) => {
+    return tea.city.toLowerCase().includes(query.toLowerCase());
+  });
 
     return (
       <div className='TeaPage'>
       {/* <About />  */}
-      <Search /> 
+      <Search setQuery={setQuery}/> 
       <TeaList /> 
       {/* <TeaReviewForm />  */}
+      {/* <TeaCard teaCards={teaCards} /> */}
       </div>
     );
   }
