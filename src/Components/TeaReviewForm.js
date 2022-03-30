@@ -1,82 +1,82 @@
 import React, { useState } from "react";
 
-function TeaReviewForm(handleForm) {
-  const [city, setCity] = useState("");
-  const [name, setName] = useState("");
-  const [address, setAddress] = useState("");
-  const [star, setStar] = useState("");
-  const [price, setPrice] = useState("");
-  const [image, setImage] = useState("");
+function TeaReviewForm({setTeas, teas, addReview}) {
+  const [newCity, setCity] = useState("");
+  const [newName, setName] = useState("");
+  const [newAddress, setAddress] = useState("");
+  const [newStar, setStar] = useState("");
+  const [newPrice, setPrice] = useState("");
+  const [newImage, setImage] = useState("");
+  const [newContent, setContent] = useState("");
 
-  function handleCity(e) {
-    setCity(e.target.value);
+  function handleNewCity(e) {
+    setCity(e.target.value)
   }
 
-  function handleName(e) {
-    setName(e.target.value);
+  function handleNewName(e) {
+    setName(e.target.value)
   }
 
-  function handleAddress(e) {
-    setAddress(e.target.value);
+  function handleNewAddress(e) {
+    setAddress(e.target.value)
   }
 
-  function handleStar(e) {
-    setStar(e.target.value);
+  function handleNewStar(e) {
+    setStar(e.target.value)
   }
 
-  function handlePrice(e) {
-    setPrice(e.target.value);
+  function handleNewPrice(e) {
+    setPrice(e.target.value)
   }
 
-  function handleImage(e) {
-    setImage(e.target.value);
+  function handleNewImage(e) {
+    setImage(e.target.value)
+  }
+
+  function handleNewContent(e) {
+    setContent(e.target.value)
   }
 
   function handleSubmit(e) {
     e.preventDefault();
+
     const newReview = {
-      city: city,
-      name: name,
-      address: address,
-      star: star,
-      price: price,
-      image: image,
+      city: newCity,
+      name: newName,
+      address: newAddress,
+      star: newStar,
+      price: newPrice,
+      image: newImage,
+      review: newContent
     };
 
-    fetch(" http://localhost:3000/teas", {
+  //backend submit//
+
+    fetch(" http://localhost:3000/teas",{
       method : "POST",
       headers : { "Content-Type": "application/json",
       Accepts: "application/json",},
       body: JSON.stringify(newReview),
     })
     .then((res) => res.json())
-    .then((newReview ) => handleForm(newReview))
+    .then((newReview) => setTeas([...teas, newReview]))
   }
 
   return (
     <div className="TeaReviewForm">
       <h1>Review Page</h1>
-      <input onChange={handleCity} value={city} type="text" name="city" placeholder="City name" />
-        <input onChange={handleName} value={name} type="text" name="image" placeholder="Image URL" />
-        <input onChange={handleAddress} value={address} type="text" name="address" placeholder="Address" />
-        <input onChange={handleStar} value={star} type="text" name="star" placeholder="Star" />
-        <input onChange={handlePrice} value={price} type="text" name="price" placeholder="Price" />
-        <input onChange={handleImage} value={image} type="text" name="image" placeholder="Image URL" />
+      <form onSubmit={handleSubmit}>
+        <input onChange={handleNewCity} type="text" name="city" placeholder="City" />
+        <input onChange={handleNewName} type="text" name="name" placeholder="Name" />
+        <input onChange={handleNewAddress}  type="text" name="address" placeholder="Address" />
+        <input onChange={handleNewStar} type="text" name="star" placeholder="Star" />
+        <input onChange={handleNewPrice} type="text" name="price" placeholder="Price" />
+        <input onChange={handleNewImage} type="text" name="image" placeholder="Image URL" />
+        <textarea onChange={handleNewContent} type="text" name="review" placeholder="Review" rows={5} />
         <button type="submit">Submit Review</button>
+       </form>
     </div>
   );
 }
 
 export default TeaReviewForm;
-
-// function TeaReviewForm() {
-  
-//   return (
-//     <div className='TeaReviewForm'>
-//       <h1>heyyme</h1>
-
-//     </div>
-//   );
-// }
-
-// export default TeaReviewForm;
