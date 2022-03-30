@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Averia Serif Libre', cursive;
-  background-color: #233329;
+  background-color: #071d13;
   color: white;
 }
 
@@ -18,80 +18,82 @@ body {
   padding: 0 1rem;
 }
 
-.App {
+/* .App {
   text-align: center;
-}
-
-.App-header {
-  /* background: linear-gradient(to right top, #233329, #495f52); */
-  /* background-color: #233329; */
-  /* min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center; */
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-/* .App-header h1 {
-  font-family: 'Supermercado One', cursive;
-  font-size: 90px;
-  color: white;
 } */
 
 .Nav {
-  display: flex;
+  /* display: flex; */
   justify-content: space-around;
   align-items: center;
-  min-height: 10vh;
-  background: #1e2c24;
+  height: 18vh;
+  background: #0a2018;
 }
 
-.nav-links li {
+.Nav h1 {
+  padding: 50px 20px;
+  font-size: 3rem;
+  margin-left: 50px;
+}
+
+.Nav ul {
+  margin: -90px 10px 10px 250px;
+  text-align: right;
+  margin-right: 50px;
+  /* position: fixed; */
+  font-size: 20px;
+}
+
+.nav-links li,
+a {
   color: white;
   width: 80%;
   display: inline;
   padding-left: 1rem;
-  justify-content: space-around;
-  align-items: center;
+  text-align: center;
   list-style: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-input {
-  width: 250px;
-  /* font-size: 24px; */
+.nav-links li:hover {
+  color: #4f725d;
 }
-
-/* .searchButton {
-  font-family: 'Averia Serif Libre', cursive;
-  margin-top: 0.7rem;
-  padding: 1.5px 2.5px;
-} */
 
 .About h1 {
+  z-index: 100;
+  position: absolute;
+  margin-right: 40px;
+  right: -0.8px;
+  text-align: right;
   color: white;
-  margin-top: 30px;
+  margin-top: 50px;
   font-size: 3rem;
 }
 
 .About-P {
+  z-index: 100;
+  position: absolute;
+  right: 200px;
+  margin-right: 40px;
+  right: -0.8px;
+  text-align: right;
   color: white;
-  margin: 30px;
-  text-align: center;
-  font-size: 1.2rem;
+  margin-top: 140px;
+  font-size: 1.5rem;
+  display: block;
+  padding: 10px;
 }
 
 .About-Img {
-  margin-top: 40px;
-  height: auto;
+  position: absolute;
+  margin: auto;
+  display: block;
+  /* margin-top: 40px; */
+  max-height: 5000px;
   max-width: 100%;
-}
-
-.TeaReviewForm h1 {
-  color: white;
-  margin-top: 30px;
-  font-size: 3rem;
 }
 
 .searchbar {
@@ -106,3 +108,81 @@ input {
   text-shadow: 0 0 0 var(--green);
 }
 
+.Developer-Info h1 {
+  color: white;
+  margin-top: 30px;
+  font-size: 2rem;
+}
+
+.Developer-Info p {
+  color: white;
+  margin: 30px;
+  /* margin-top: 30px; */
+  text-align: center;
+  font-size: 1.2rem;
+}
+.Developer-Info img {
+  margin-top: 40px;
+  height: auto;
+  max-width: 100%;
+}
+
+.TeaReviewForm {
+  border: 3px solid white;
+}
+
+.TeaReviewForm h1 {
+  font-family: 'Averia Serif Libre', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 30px;
+}
+.TeaReviewForm input,
+select,
+textarea {
+  font-family: 'Averia Serif Libre', cursive;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  margin: auto;
+  padding: 10px;
+  width: 28rem;
+  height: 3rem;
+  box-sizing: border-box;
+}
+
+.TeaReviewForm button {
+  font-family: 'Averia Serif Libre', cursive;
+  color: white;
+  margin: 20px;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 10px 20px 13px;
+  margin: 45px;
+  left: 36rem;
+  outline: 0;
+  border: 1px solid white;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.TeaReviewForm button:after {
+  content: '';
+  background-color: #446451;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.TeaReviewForm button:hover:after {
+  top: 0px;
+  left: 0px;
+}

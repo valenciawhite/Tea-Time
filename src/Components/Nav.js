@@ -13,9 +13,9 @@ function Nav() {
       <header>
       <h1>
         Tea Time
-        <span className="logo" role="img">
+        {/* <span className="logo" role="img">
           🌱
-        </span>
+        </span> */}
       </h1>
       <nav>
         <ul className="nav-links">
@@ -26,7 +26,7 @@ function Nav() {
             <li>About </li>
           </Link>
           <Link style={navStyle} to='/reviews'>
-            <li>Reviews </li>
+            <li>Submit A Review</li>
           </Link>
           <Link style={navStyle} to='/developer-info'>
             <li>Developer Info </li>
