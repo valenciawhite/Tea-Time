@@ -24,10 +24,10 @@ useEffect(fetchTeas, []);
   console.log(teas)
 
 
-  function addReview(newReview){
-    const updateTea = [...teas, newReview]
-    setTeas(updateTea)
-  }
+  // function addReview(newReview){
+  //   const updateTea = [...teas, newReview]
+  //   setTeas(updateTea)
+  // }
 
   return (
     <Router>

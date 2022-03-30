@@ -1,40 +1,40 @@
 import React, { useState } from "react";
 
-function TeaReviewForm({setTeas, teas, addReview}) {
-  const [newCity, setCity] = useState("");
-  const [newName, setName] = useState("");
-  const [newAddress, setAddress] = useState("");
-  const [newStar, setStar] = useState("");
-  const [newPrice, setPrice] = useState("");
-  const [newImage, setImage] = useState("");
-  const [newContent, setContent] = useState("");
+function TeaReviewForm({setTeas, teas}) {
+  const [newCity, setNewCity] = useState("");
+  const [newName, setNewName] = useState("");
+  const [newAddress, setNewAddress] = useState("");
+  const [newStar, setNewStar] = useState("");
+  const [newPrice, setNewPrice] = useState("");
+  const [newImage, setNewImage] = useState("");
+  const [newContent, setNewContent] = useState("");
 
   function handleNewCity(e) {
-    setCity(e.target.value)
+    setNewCity(e.target.value)
   }
 
   function handleNewName(e) {
-    setName(e.target.value)
+    setNewName(e.target.value)
   }
 
   function handleNewAddress(e) {
-    setAddress(e.target.value)
+    setNewAddress(e.target.value)
   }
 
   function handleNewStar(e) {
-    setStar(e.target.value)
+    setNewStar(e.target.value)
   }
 
   function handleNewPrice(e) {
-    setPrice(e.target.value)
+    setNewPrice(e.target.value)
   }
 
   function handleNewImage(e) {
-    setImage(e.target.value)
+    setNewImage(e.target.value)
   }
 
   function handleNewContent(e) {
-    setContent(e.target.value)
+    setNewContent(e.target.value)
   }
 
   function handleSubmit(e) {
@@ -47,7 +47,7 @@ function TeaReviewForm({setTeas, teas, addReview}) {
       star: newStar,
       price: newPrice,
       image: newImage,
-      review: newContent
+      content: newContent
     };
 
   //backend submit//
@@ -72,7 +72,7 @@ function TeaReviewForm({setTeas, teas, addReview}) {
         <input onChange={handleNewStar} type="text" name="star" placeholder="Star" />
         <input onChange={handleNewPrice} type="text" name="price" placeholder="Price" />
         <input onChange={handleNewImage} type="text" name="image" placeholder="Image URL" />
-        <textarea onChange={handleNewContent} type="text" name="review" placeholder="Review" rows={5} />
+        <textarea onChange={handleNewContent} type="text" name="content" placeholder="Review" rows={5} />
         <button type="submit">Submit Review</button>
        </form>
     </div>
