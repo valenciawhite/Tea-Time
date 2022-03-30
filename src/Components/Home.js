@@ -2,7 +2,7 @@ import reactRouterDom from 'react-router-dom';
 import './App.css';
 import { Link } from 'react-router-dom';
 
-function Home({teas}) {
+function Nav() {
 
   const navStyle = {
     color:'white'
@@ -18,4 +18,4 @@ function Home({teas}) {
   );
 }
 
-export default Home;
+export default Nav;

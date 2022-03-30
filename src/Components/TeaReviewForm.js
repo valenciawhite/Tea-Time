@@ -64,7 +64,6 @@ function TeaReviewForm({setTeas, teas}) {
 
   return (
     <div className="TeaReviewForm">
-
       <h1>Review Page</h1>
       <form onSubmit={handleSubmit}>
         <input onChange={handleNewCity} type="text" name="city" placeholder="City" />
@@ -74,18 +73,6 @@ function TeaReviewForm({setTeas, teas}) {
         <input onChange={handleNewPrice} type="text" name="price" placeholder="Price" />
         <input onChange={handleNewImage} type="text" name="image" placeholder="Image URL" />
         <textarea onChange={handleNewContent} type="text" name="content" placeholder="Review" rows={5} />
-
-      <h1>Have A Café You Want To Shoutout? 
-      <br/>
-      Leave Us A Review!</h1>
-      <form onSubmit={handleSubmit}>
-        <input onChange={handleCity} value={city} type="text" name="city" placeholder="City" />
-        <input onChange={handleName} value={name} type="text" name="name" placeholder="Name" />
-        <input onChange={handleAddress} value={address} type="text" name="address" placeholder="Address" />
-        <input onChange={handleStar} value={star} type="text" name="star" placeholder="Star " />
-        <input onChange={handlePrice} value={price} type="text" name="price" placeholder="Price" />
-        <input onChange={handleImage} value={image} type="text" name="image" placeholder="Image URL" />
-
         <button type="submit">Submit Review</button>
        </form>
     </div>
@@ -93,4 +80,3 @@ function TeaReviewForm({setTeas, teas}) {
 }
 
 export default TeaReviewForm;
-
