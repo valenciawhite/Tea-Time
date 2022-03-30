@@ -2,7 +2,7 @@ function TeaReviewForm() {
   
     return (
       <div className='TeaReviewForm'>
-        <h1>heyyme</h1>
+        <h1>Leave Us A Review</h1>
 
       </div>
     );
