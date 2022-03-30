@@ -10,6 +10,7 @@ function Home({teas}) {
 
   return (
     <div className="Home">
+    <h1>Hello</h1>
       <nav>
         <ul className="nav-links">
         </ul>
