@@ -10,22 +10,33 @@ function Nav() {
 
   return (
     <div className="Nav">
+      <header>
+      <h1>
+        Tea Time
+        <span className="logo" role="img">
+          🌱
+        </span>
+      </h1>
       <nav>
-        <h3></h3>
         <ul className="nav-links">
+        <Link style={navStyle} to='/'>
+            <li>Home</li>
+          </Link>
           <Link style={navStyle} to='/about'>
-            <li>About</li>
+            <li>About </li>
           </Link>
           <Link style={navStyle} to='/reviews'>
-            <li>Reviews</li>
+            <li>Reviews </li>
           </Link>
           <Link style={navStyle} to='/developer-info'>
-            <li>DeveloperInfo</li>
+            <li>Developer Info </li>
           </Link>
         </ul>
       </nav>
+      </header>
     </div>
   );
 }
 
 export default Nav;
+
