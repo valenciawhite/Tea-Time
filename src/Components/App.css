@@ -8,6 +8,8 @@
 
 body {
   font-family: 'Averia Serif Libre', cursive;
+  background-color: #233329;
+  color: white;
 }
 
 .container {
@@ -22,7 +24,7 @@ body {
 
 .App-header {
   /* background: linear-gradient(to right top, #233329, #495f52); */
-  background-color: #233329;
+  /* background-color: #233329; */
   /* min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,20 +34,10 @@ body {
   color: white;
 }
 
-.App-header h1 {
+/* .App-header h1 {
   font-family: 'Supermercado One', cursive;
   font-size: 90px;
   color: white;
-  /* margin-top: 2rem; */
-}
-
-/* .App-header p {
-  font-family: 'Averia Serif Libre', cursive;
-  font-size: 21px;
-  color: white;
-  padding: 0.8rem;
-  line-height: 5px;
-  margin-bottom: 0.4rem;
 } */
 
 .Nav {
@@ -53,13 +45,14 @@ body {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background: #719e82;
-  color: white;
+  background: #1e2c24;
 }
 
-.nav-links {
-  width: 200%;
-  display: flex;
+.nav-links li {
+  color: white;
+  width: 80%;
+  display: inline;
+  padding-left: 1rem;
   justify-content: space-around;
   align-items: center;
   list-style: none;
@@ -76,10 +69,29 @@ input {
   padding: 1.5px 2.5px;
 } */
 
-ul {
-  list-style-type: none;
-  margin: 1rem;
-  padding: 2rem;
+.About h1 {
+  color: white;
+  margin-top: 30px;
+  font-size: 3rem;
+}
+
+.About-P {
+  color: white;
+  margin: 30px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.About-Img {
+  margin-top: 40px;
+  height: auto;
+  max-width: 100%;
+}
+
+.TeaReviewForm h1 {
+  color: white;
+  margin-top: 30px;
+  font-size: 3rem;
 }
 
 .searchbar {

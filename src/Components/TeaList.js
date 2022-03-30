@@ -1,12 +1,15 @@
-import TeaCard from "./TeaCard";
+// import React from "react";
+// import TeaCard from "./TeaCard";
 
-function TeaList() {
+// function TeaList({ teas }) {
+//     const renderTeas = teas.map((tea)=>(
+//     <TeaCard key={tea.id} city={tea.city} name={tea.name} address={tea.address} star={tea.star} price={tea.price} image={tea.image} />
+//     ));
+//     return (
+//       <div className='TeaList'>
+//       {renderTeas}
+//       </div>
+//     );
+//   }
   
-    return (
-      <div className='TeaList'>
-      <TeaCard /> 
-      </div>
-    );
-  }
-  
-  export default TeaList;
+//   export default TeaList;
