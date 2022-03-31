@@ -6,7 +6,7 @@ function TeaList({ teas }) {
     <TeaCard key={tea.id} city={tea.city} name={tea.name} address={tea.address} star={tea.star} price={tea.price} image={tea.image} />
     ));
     return (
-      <ul className='TeaList'>
+      <ul className='cards'>
       {renderTeas}
       </ul>
     );
