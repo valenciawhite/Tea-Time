@@ -7,12 +7,12 @@ function TeaCard({ city, name, address, star, price, image }) {
       setRecommend(!recommend);
     }
     return (
-      <div className='TeaCard'>
-        <h2>{city}</h2>
-        <h2>{name}</h2>
-        <h2>{address}</h2>
-        <h3>{star}</h3>
-        <h3>{price}</h3>
+      <div className='card'>
+        <h4>{city}</h4>
+        <h4>{name}</h4>
+        <h4>{address}</h4>
+        <h4>{star}</h4>
+        <h4>{price}</h4>
         <img src={image} alt={name}/>
 
         {recommend ? (

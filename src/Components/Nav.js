@@ -2,8 +2,8 @@ import reactRouterDom from 'react-router-dom';
 import './App.css';
 import { Link } from 'react-router-dom';
 
-function Nav({teas}) {
-console.log(teas)
+function Nav() {
+
   const navStyle = {
     color:'white'
   };
@@ -25,11 +25,11 @@ console.log(teas)
           <Link style={navStyle} to='/about'>
             <li>About </li>
           </Link>
-          <Link style={navStyle} to='/reviews'>
-            <li>Submit A Review</li>
+           <Link style={navStyle} to='/tea-shop'>
+            <li>Tea Shops</li>
           </Link>
-          <Link style={navStyle} to='/developer-info'>
-            <li>Developer Info </li>
+           <Link style={navStyle} to='/comment'>
+            <li>Comment</li>
           </Link>
         </ul>
       </nav>

@@ -1,52 +1,55 @@
 import React, { useState } from "react";
+import TeaCard from "./TeaCard";
+import TeaList from "./TeaList";
 
-function TeaReviewForm({setTeas, teas}) {
+function TeaReviewForm({setTeas, teas, renderTeas}) {
   const [newCity, setNewCity] = useState("");
   const [newName, setNewName] = useState("");
-  const [newAddress, setNewAddress] = useState("");
-  const [newStar, setNewStar] = useState("");
-  const [newPrice, setNewPrice] = useState("");
-  const [newImage, setNewImage] = useState("");
+  const [newEmail, setNewEmail] = useState("");
+  // const [newStar, setNewStar] = useState("");
+  // const [newPrice, setNewPrice] = useState("");
+  // const [newImage, setNewImage] = useState("");
   const [newContent, setNewContent] = useState("");
 
-  function handleNewCity(e) {
-    setNewCity(e.target.value)
+  function handleNewCity(event) {
+    setNewCity(event.target.value)
   }
 
-  function handleNewName(e) {
-    setNewName(e.target.value)
+  function handleNewName(event) {
+    setNewName(event.target.value)
   }
 
-  function handleNewAddress(e) {
-    setNewAddress(e.target.value)
+  function handleNewEmail(event) {
+    setNewEmail(event.target.value)
   }
 
-  function handleNewStar(e) {
-    setNewStar(e.target.value)
+  // function handleNewStar(e) {
+  //   setNewStar(e.target.value)
+  // }
+
+  // function handleNewPrice(e) {
+  //   setNewPrice(e.target.value)
+  // }
+
+  // function handleNewImage(e) {
+  //   setNewImage(e.target.value)
+  // }
+
+  function handleNewContent(event) {
+    setNewContent(event.target.value)
   }
 
-  function handleNewPrice(e) {
-    setNewPrice(e.target.value)
-  }
-
-  function handleNewImage(e) {
-    setNewImage(e.target.value)
-  }
-
-  function handleNewContent(e) {
-    setNewContent(e.target.value)
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
 
     const newReview = {
       city: newCity,
       name: newName,
-      address: newAddress,
-      star: newStar,
-      price: newPrice,
-      image: newImage,
+      email: newEmail,
+      // address: newAddress,
+      // star: newStar,
+      // price: newPrice,
+      // image: newImage,
       content: newContent
     };
 
@@ -64,33 +67,23 @@ function TeaReviewForm({setTeas, teas}) {
 
   return (
     <div className="TeaReviewForm">
+      <h1>Questions or Comments? </h1>
+      <h1>We would love to hear from you! </h1>
 
-      <h1>Review Page</h1>
       <form onSubmit={handleSubmit}>
-        <input onChange={handleNewCity} type="text" name="city" placeholder="City" />
-        <input onChange={handleNewName} type="text" name="name" placeholder="Name" />
-        <input onChange={handleNewAddress}  type="text" name="address" placeholder="Address" />
-        <input onChange={handleNewStar} type="text" name="star" placeholder="Star" />
+        <input onChange={handleNewName} type="text" name="name" placeholder="name" />
+        <input onChange={handleNewCity} type="text" name="city" placeholder="city" />
+        <input onChange={handleNewEmail}  type="text" name="address" placeholder="email" />
+        {/* <input onChange={handleNewStar} type="text" name="star" placeholder="Star" />
         <input onChange={handleNewPrice} type="text" name="price" placeholder="Price" />
-        <input onChange={handleNewImage} type="text" name="image" placeholder="Image URL" />
-        <textarea onChange={handleNewContent} type="text" name="content" placeholder="Review" rows={5} />
-
-      <h1>Have A Café You Want To Shoutout? 
-      <br/>
-      Leave Us A Review!</h1>
-      <form onSubmit={handleSubmit}>
-        <input onChange={handleCity} value={city} type="text" name="city" placeholder="City" />
-        <input onChange={handleName} value={name} type="text" name="name" placeholder="Name" />
-        <input onChange={handleAddress} value={address} type="text" name="address" placeholder="Address" />
-        <input onChange={handleStar} value={star} type="text" name="star" placeholder="Star " />
-        <input onChange={handlePrice} value={price} type="text" name="price" placeholder="Price" />
-        <input onChange={handleImage} value={image} type="text" name="image" placeholder="Image URL" />
-
+        <input onChange={handleNewImage} type="text" name="image" placeholder="Image URL" /> */}
+        <textarea onChange={handleNewContent} type="text" name="content" placeholder="comment" rows={5} />
         <button type="submit">Submit Review</button>
        </form>
+       {/* <TeaReviewForm teas={teas}/> */}
     </div>
-  );
+  
+  )
 }
 
 export default TeaReviewForm;
-

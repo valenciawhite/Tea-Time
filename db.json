@@ -271,13 +271,10 @@
       "image": "https://s3-media0.fl.yelpcdn.com/bphoto/I95QshhAH6nZGlCWHEYtCQ/o.jpg"
     },
     {
-      "city": "asdf",
-      "name": "asdf",
-      "address": "asdf",
-      "star": "asdf",
-      "price": "asdf",
-      "image": "asdf",
-      "content": "asdfa",
+      "city": "Urbana",
+      "name": "Ethan Lee",
+      "email": "li223@illinois.edu",
+      "content": "Great!!",
       "id": 31
     }
   ]
