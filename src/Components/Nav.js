@@ -29,7 +29,7 @@ function Nav() {
             <li>Location</li>
           </Link>
            <Link style={navStyle} to='/comment'>
-            <li>Support</li>
+            <li>Comment</li>
           </Link>
         </ul>
       </nav>

@@ -41,8 +41,9 @@ function TeaReviewForm({setTeas, teas, renderTeas}) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert("Thank you! Check out your added location!")
-    window.open('https://www.yelp.com/');
+    alert("Please check out your comment!")
+    window.location.href='/tea-shop'
+    // window.open('/tea-shop');
 
     const newReview = {
       city: newCity,
@@ -70,13 +71,26 @@ function TeaReviewForm({setTeas, teas, renderTeas}) {
       <h1>We would love to hear from you! </h1>
 
       <form onSubmit={handleSubmit}>
-        <input onChange={handleNewCity} type="text" name="city" placeholder="your city" />
-        <input onChange={handleNewName} type="text" name="name" placeholder="tea shop name" />
+        <select onChange={handleNewCity}>
+        <option>select a city</option> 
+        <option>Austin, TX</option><option>Atlanta, GA</option><option>Baltimore, MD</option><option>Boston, MA</option><option>Charlotte, NC</option><option>Chicago, IL</option> <option>Dallas, TX</option> <option>Denver, CO</option><option>Detroit, MI</option><option>Houston, TX</option><option>Indianapolis, IN</option><option>Kansas City, MO</option><option>Las Vegas, NV</option><option>Los Angeles, CA </option>
+        <option>Miami, FL</option><option>Milwaukee, WI</option><option>Minneapolis, MN</option><option>Nashville, TN</option><option>New York, NY</option> <option>Philadelphia, PA</option> <option>San Francisco, CA</option> <option>St Louis, MO </option><option>Seattle, WA</option><option>Washington DC</option>
+        </select>
+
+        <input onChange={handleNewName} type="text" placeholder="tea shop" />
         <input onChange={handleNewAddress} type="text" name="address" placeholder="address" />
-        <input onChange={handleNewStar} type="text" name="star" placeholder="star ⭐" />
-        <input onChange={handleNewPrice} type="text" name="price" placeholder="$~$$$$$" />
-        <input onChange={handleNewImage} type="text" name="image" placeholder="image URL" />
-        <textarea onChange={handleNewContent} type="text" name="content" placeholder="comment" rows={5} />
+      
+        <select onChange={handleNewStar}>
+
+        <option>star ⭐️ </option><option>⭐️</option><option>⭐️⭐️</option><option>⭐️⭐️⭐️</option> <option>⭐️⭐️⭐️⭐️</option> <option>⭐️⭐️⭐️⭐️⭐️</option>
+        </select>
+        
+        <select onChange={handleNewPrice}>
+        <option>price 💰 </option><option>💰</option><option>💰💰</option><option>💰💰💰</option> <option>💰💰💰💰</option> <option>💰💰💰💰💰</option>
+        </select>
+        <input onChange={handleNewImage} type="text" placeholder="image URL" />
+        <textarea onChange={handleNewContent} type="text" placeholder="comment" />
+    
         <button type="submit">Submit</button>
        </form>
     </div>
