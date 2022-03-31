@@ -12,10 +12,18 @@ function Home({teas}) {
 
   return (
     <div className="Home">
+
      <h2>Let's get this par-tea started!</h2>
      <img className='Home-Img' src= "https://cdn.minnesotamonthly.com/wp-content/uploads/sites/85/2020/11/mm-2021-01_Taste_KevinKramer_NETeaHouse_G.jpg" />
      {/* <div><TeaPage teas={teas}/></div> */}
      
+=======
+    <h1>Hello</h1>
+      <nav>
+        <ul className="nav-links">
+        </ul>
+      </nav>
+
     </div>
   );
 }
