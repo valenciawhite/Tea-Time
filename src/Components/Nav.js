@@ -1,4 +1,4 @@
-import reactRouterDom from 'react-router-dom';
+// import reactRouterDom from 'react-router-dom';
 import './App.css';
 import { Link } from 'react-router-dom';
 
@@ -22,14 +22,14 @@ function Nav() {
         <Link style={navStyle} to='/'>
             <li>Home</li>
           </Link>
-          <Link style={navStyle} to='/about'>
+          <Link style={navStyle} to='/tea-shop'>
+            <li>Tea Shops</li>
+          </Link>
+           <Link style={navStyle} to='/comment'>
+            <li>Comment</li>
+          </Link>
+           <Link style={navStyle} to='/about'>
             <li>About </li>
-          </Link>
-          <Link style={navStyle} to='/reviews'>
-            <li>Submit A Review</li>
-          </Link>
-          <Link style={navStyle} to='/developer-info'>
-            <li>Developer Info </li>
           </Link>
         </ul>
       </nav>
@@ -39,4 +39,3 @@ function Nav() {
 }
 
 export default Nav;
-

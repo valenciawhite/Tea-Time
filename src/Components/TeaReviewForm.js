@@ -1,74 +1,85 @@
 import React, { useState } from "react";
+// import TeaCard from "./TeaCard";
+// import TeaList from "./TeaList";
 
-function TeaReviewForm(handleForm) {
-  const [city, setCity] = useState("");
-  const [name, setName] = useState("");
-  const [address, setAddress] = useState("");
-  const [star, setStar] = useState("");
-  const [price, setPrice] = useState("");
-  const [image, setImage] = useState("");
+function TeaReviewForm({setTeas, teas, renderTeas}) {
+  const [newCity, setNewCity] = useState("");
+  const [newName, setNewName] = useState("");
+  const [newAddress, setNewAddress] = useState("");
+  const [newStar, setNewStar] = useState("");
+  const [newPrice, setNewPrice] = useState("");
+  const [newImage, setNewImage] = useState("");
+  const [newContent, setNewContent] = useState("");
 
-  function handleCity(e) {
-    setCity(e.target.value);
+  function handleNewCity(event) {
+    setNewCity(event.target.value)
   }
 
-  function handleName(e) {
-    setName(e.target.value);
+  function handleNewName(event) {
+    setNewName(event.target.value)
   }
 
-  function handleAddress(e) {
-    setAddress(e.target.value);
+  function handleNewAddress(event) {
+    setNewAddress(event.target.value)
   }
 
-  function handleStar(e) {
-    setStar(e.target.value);
+  function handleNewStar(event) {
+    setNewStar(event.target.value)
   }
 
-  function handlePrice(e) {
-    setPrice(e.target.value);
+  function handleNewPrice(event) {
+    setNewPrice(event.target.value)
   }
 
-  function handleImage(e) {
-    setImage(e.target.value);
+  function handleNewImage(event) {
+    setNewImage(event.target.value)
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleNewContent(event) {
+    setNewContent(event.target.value)
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert("Thank you! Check out your added location!");
+
     const newReview = {
-      city: city,
-      name: name,
-      address: address,
-      star: star,
-      price: price,
-      image: image,
+      city: newCity,
+      name: newName,
+      address: newAddress,
+      star: newStar,
+      price: newPrice,
+      image: newImage,
+      content: newContent
     };
 
-    fetch(" http://localhost:3000/teas", {
+    fetch(" http://localhost:3000/teas",{
       method : "POST",
       headers : { "Content-Type": "application/json",
       Accepts: "application/json",},
       body: JSON.stringify(newReview),
     })
     .then((res) => res.json())
-    .then((newReview ) => handleForm(newReview))
+    .then((newReview) => setTeas([...teas, newReview]))
   }
 
   return (
     <div className="TeaReviewForm">
-      <h1>Have A Café You Want To Shoutout? 
-      <br/>
-      Leave Us A Review!</h1>
+      <h1>Help us find more shops 🌱 </h1>
+      <h1>We would love to hear from you! </h1>
+
       <form onSubmit={handleSubmit}>
-        <input onChange={handleCity} value={city} type="text" name="city" placeholder="City" />
-        <input onChange={handleName} value={name} type="text" name="name" placeholder="Name" />
-        <input onChange={handleAddress} value={address} type="text" name="address" placeholder="Address" />
-        <input onChange={handleStar} value={star} type="text" name="star" placeholder="Star " />
-        <input onChange={handlePrice} value={price} type="text" name="price" placeholder="Price" />
-        <input onChange={handleImage} value={image} type="text" name="image" placeholder="Image URL" />
-        <button type="submit">Submit Review</button>
+        <input onChange={handleNewCity} type="text" name="city" placeholder="your city" />
+        <input onChange={handleNewName} type="text" name="name" placeholder="tea shop name" />
+        <input onChange={handleNewAddress} type="text" name="address" placeholder="address" />
+        <input onChange={handleNewStar} type="text" name="star" placeholder="star ⭐" />
+        <input onChange={handleNewPrice} type="text" name="price" placeholder="$~$$$$$" />
+        <input onChange={handleNewImage} type="text" name="image" placeholder="image URL" />
+        <textarea onChange={handleNewContent} type="text" name="content" placeholder="comment" rows={5} />
+        <button type="submit">Submit</button>
        </form>
     </div>
-  );
+  )
 }
 
 export default TeaReviewForm;

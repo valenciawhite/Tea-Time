@@ -92,11 +92,12 @@ a {
   margin: auto;
   display: block;
   /* margin-top: 40px; */
-  max-height: 5000px;
+  max-height: 2000px;
   max-width: 100%;
 }
 
 .searchbar {
+  color: white;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -183,6 +184,107 @@ textarea {
 }
 
 .TeaReviewForm button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.cards {
+  list-style: none;
+}
+
+.card {
+  margin: 2rem;
+  margin-right: 80px;
+  margin-left: 75px;
+  font-size: 18px;
+  display: inline-block;
+  text-align: center;
+}
+
+.card img {
+  width: 400px;
+  height: 350px;
+  border-radius: 5%;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 30px;
+  /* float: left; */
+  font-weight: bold;
+  shape-outside: circle();
+  background-color: Green;
+  color: white;
+}
+
+/* .card button {
+  margin-top: 0.5rem;
+} */
+
+.primary {
+  font-family: 'Averia Serif Libre', cursive;
+  color: white;
+  background-color: var(--green);
+  font-size: 20px;
+  border: 1px solid white;
+  letter-spacing: 2px;
+  padding: 10px 35px 13px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.Home img {
+  border-radius: 5%;
+  margin-top: 50px;
+  margin-right: 75px;
+  /* margin-bottom: 160px; */
+  padding: 1px;
+  display: inline;
+  position: relative;
+  right: -50px;
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+}
+.Home h3 {
+  display: inline-block;
+  margin-right: 158px;
+  margin-top: 35px;
+  margin-left: 250px;
+}
+
+.home-button {
+  font-family: 'Averia Serif Libre', cursive;
+  color: white;
+  margin: 20px;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 10px 20px 13px;
+  margin: 45px;
+  left: 14rem;
+  outline: 0;
+  border: 1px solid white;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  touch-action: manipulation;
+  margin-right: 444px;
+  margin-top: 45px;
+  margin-left: -50px;
+}
+.home-button:after {
+  content: '';
+  background-color: #446451;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.home-button:hover:after {
   top: 0px;
   left: 0px;
 }

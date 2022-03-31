@@ -1,20 +1,27 @@
-import React, {useState, useEffect} from 'react';
-import About from "./About";
+import React from 'react';
+// import About from "./About";
 import Search from "./Search";
 import TeaList from "./TeaList";
-import TeaReviewForm from "./TeaReviewForm";
+// import TeaReviewForm from "./TeaReviewForm";
+// import TeaCard from "./TeaCard";
+import './App.css'
+// import {Link} from 'react-router-dom'
+
+import {useState, useEffect} from "react";
+
 
 function TeaPage() {
-  const baseUrl = 'http://localhost:3000/teas';
-  const [teas, setTeas] = useState([])
-  const [query, setQuery] = useState("")
+  const [teas, setTeas] = useState([]);
+  const [query, setQuery] = useState("");
+  console.log(teas)
+
 
 useEffect(fetchTeas, []);
 
   function fetchTeas(){
-    fetch(baseUrl)
+    fetch('http://localhost:3000/teas')
     .then(res => res.json())
-    .then(data => setTeas(data))
+    .then(data => setTeas(data));
   }
 
   const filterTeas = teas.filter((tea) => {
@@ -22,13 +29,13 @@ useEffect(fetchTeas, []);
   });
 
     return (
+      <main>
       <div className='TeaPage'>
-      {/* <About />  */}
       <Search setQuery={setQuery}/> 
-      <TeaList /> 
-      {/* <TeaReviewForm />  */}
-      {/* <TeaCard teaCards={teaCards} /> */}
+      <TeaList teas={filterTeas}/> 
+      <div teas={teas}> </div>
       </div>
+      </main>
     );
   }
   
