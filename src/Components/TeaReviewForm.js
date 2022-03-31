@@ -5,10 +5,10 @@ import TeaList from "./TeaList";
 function TeaReviewForm({setTeas, teas, renderTeas}) {
   const [newCity, setNewCity] = useState("");
   const [newName, setNewName] = useState("");
-  const [newEmail, setNewEmail] = useState("");
-  // const [newStar, setNewStar] = useState("");
-  // const [newPrice, setNewPrice] = useState("");
-  // const [newImage, setNewImage] = useState("");
+  const [newAddress, setNewAddress] = useState("");
+  const [newStar, setNewStar] = useState("");
+  const [newPrice, setNewPrice] = useState("");
+  const [newImage, setNewImage] = useState("");
   const [newContent, setNewContent] = useState("");
 
   function handleNewCity(event) {
@@ -19,21 +19,21 @@ function TeaReviewForm({setTeas, teas, renderTeas}) {
     setNewName(event.target.value)
   }
 
-  function handleNewEmail(event) {
-    setNewEmail(event.target.value)
+  function handleNewAddress(event) {
+    setNewAddress(event.target.value)
   }
 
-  // function handleNewStar(e) {
-  //   setNewStar(e.target.value)
-  // }
+  function handleNewStar(event) {
+    setNewStar(event.target.value)
+  }
 
-  // function handleNewPrice(e) {
-  //   setNewPrice(e.target.value)
-  // }
+  function handleNewPrice(event) {
+    setNewPrice(event.target.value)
+  }
 
-  // function handleNewImage(e) {
-  //   setNewImage(e.target.value)
-  // }
+  function handleNewImage(event) {
+    setNewImage(event.target.value)
+  }
 
   function handleNewContent(event) {
     setNewContent(event.target.value)
@@ -41,19 +41,18 @@ function TeaReviewForm({setTeas, teas, renderTeas}) {
 
   function handleSubmit(event) {
     event.preventDefault();
+    alert("Thank you! Check out your added location!")
+    window.open('https://www.yelp.com/');
 
     const newReview = {
       city: newCity,
       name: newName,
-      email: newEmail,
-      // address: newAddress,
-      // star: newStar,
-      // price: newPrice,
-      // image: newImage,
+      address: newAddress,
+      star: newStar,
+      price: newPrice,
+      image: newImage,
       content: newContent
     };
-
-  //backend submit//
 
     fetch(" http://localhost:3000/teas",{
       method : "POST",
@@ -67,22 +66,20 @@ function TeaReviewForm({setTeas, teas, renderTeas}) {
 
   return (
     <div className="TeaReviewForm">
-      <h1>Questions or Comments? </h1>
+      <h1>Help us find more shops 🌱 </h1>
       <h1>We would love to hear from you! </h1>
 
       <form onSubmit={handleSubmit}>
-        <input onChange={handleNewName} type="text" name="name" placeholder="name" />
-        <input onChange={handleNewCity} type="text" name="city" placeholder="city" />
-        <input onChange={handleNewEmail}  type="text" name="address" placeholder="email" />
-        {/* <input onChange={handleNewStar} type="text" name="star" placeholder="Star" />
-        <input onChange={handleNewPrice} type="text" name="price" placeholder="Price" />
-        <input onChange={handleNewImage} type="text" name="image" placeholder="Image URL" /> */}
+        <input onChange={handleNewCity} type="text" name="city" placeholder="your city" />
+        <input onChange={handleNewName} type="text" name="name" placeholder="tea shop name" />
+        <input onChange={handleNewAddress} type="text" name="address" placeholder="address" />
+        <input onChange={handleNewStar} type="text" name="star" placeholder="star ⭐" />
+        <input onChange={handleNewPrice} type="text" name="price" placeholder="$~$$$$$" />
+        <input onChange={handleNewImage} type="text" name="image" placeholder="image URL" />
         <textarea onChange={handleNewContent} type="text" name="content" placeholder="comment" rows={5} />
-        <button type="submit">Submit Review</button>
+        <button type="submit">Submit</button>
        </form>
-       {/* <TeaReviewForm teas={teas}/> */}
     </div>
-  
   )
 }
 

@@ -26,10 +26,10 @@ function Nav() {
             <li>About </li>
           </Link>
            <Link style={navStyle} to='/tea-shop'>
-            <li>Tea Shops</li>
+            <li>Location</li>
           </Link>
            <Link style={navStyle} to='/comment'>
-            <li>Comment</li>
+            <li>Support</li>
           </Link>
         </ul>
       </nav>
