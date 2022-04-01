@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-
 function About() {
 
   function handleProfileEthan(){
@@ -9,8 +6,6 @@ function About() {
   function handleProfileValencia(){
     window.open('https://github.com/valenciawhite')
   }
-
-  const githubIcon = <FontAwesomeIcon icon={ ['fab', 'github'] } />
   
     return (
       <div className='About'>
