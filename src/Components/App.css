@@ -200,11 +200,20 @@ textarea {
 }
 .card {
   margin: 2rem;
-  margin-right: 50px;
+  /* margin-right: 50px; */
+  margin-right: 0;
   margin-left: 70px;
   font-size: 18px;
   display: inline-block;
   text-align: center;
+}
+
+.delete-btn {
+  font-size: 35px;
+  position: relative;
+  top: -550px;
+  left: -15px;
+  cursor: pointer;
 }
 
 .card img {
