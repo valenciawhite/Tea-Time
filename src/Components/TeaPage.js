@@ -13,7 +13,7 @@ import {useState, useEffect} from "react";
 function TeaPage() {
   const [teas, setTeas] = useState([]);
   const [query, setQuery] = useState("");
-  console.log(teas)
+  // console.log(teas)
 
 
 useEffect(fetchTeas, []);
@@ -24,6 +24,12 @@ useEffect(fetchTeas, []);
     .then(data => setTeas(data));
   }
 
+//Front-end Delete
+  function handleDelete(id){
+    const updateTeaListings = teas.filter((tea) => tea.id !== id)
+    setTeas(updateTeaListings)
+  }
+
   const filterTeas = teas.filter((tea) => {
     return tea.city.toLowerCase().includes(query.toLowerCase());
   });
@@ -32,7 +38,7 @@ useEffect(fetchTeas, []);
       <main>
       <div className='TeaPage'>
       <Search setQuery={setQuery}/> 
-      <TeaList teas={filterTeas}/> 
+      <TeaList teas={filterTeas} handleDelete={handleDelete} /> 
       <div teas={teas}> </div>
       </div>
       </main>

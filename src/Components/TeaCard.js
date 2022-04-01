@@ -4,8 +4,10 @@ import { faThumbsUp as fasFaThumbsUp} from '@fortawesome/free-solid-svg-icons'
 import { faThumbsUp as farFaThumbsUp} from '@fortawesome/free-regular-svg-icons'
 import { faCompass} from '@fortawesome/free-regular-svg-icons'
 
-function TeaCard({ city, name, address, star, price, image, content }) {
+function TeaCard({ city, name, address, star, price, image, content, id, handleDelete }) {
+
   const [recommend, setRecommend] = useState(true);
+  // const [teaList, updateTeaList] = useState([]);
   // const [share, setShare] = useState(true);
 
   function handleShare(event){
@@ -20,6 +22,13 @@ function TeaCard({ city, name, address, star, price, image, content }) {
     function handleClick(){
     setRecommend(!recommend);
   }
+//Back-end Delete 
+  function handleRemoveItem(){
+    fetch(`http://localhost:3000/teas/${id}`, {method: 'DELETE'})
+    .then(res => res.json())
+    .then(data => handleDelete(id), console.log('deleted!'))
+  }
+
 
   const solidLike = <FontAwesomeIcon icon={ fasFaThumbsUp} />;
   const outlineLike = <FontAwesomeIcon icon={ farFaThumbsUp} />;
@@ -53,6 +62,7 @@ function TeaCard({ city, name, address, star, price, image, content }) {
         {" "}
         📝 Comment
       </button>
+      <span className="delete-btn" onClick={handleRemoveItem}>&times;</span>
     </div>
   );
 }
