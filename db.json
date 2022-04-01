@@ -177,7 +177,7 @@
       "name": "McHugh Tea",
       "address": "5305 Bissonnet St, Bellaire, TX 77401",
       "star": "⭐️⭐️⭐️⭐️",
-      "price": "💲💲",
+      "price": "💰💰",
       "image": "https://s3-media0.fl.yelpcdn.com/bphoto/K-u70jDGL-vb6fT_d-8Tig/o.jpg"
     },
     {
@@ -195,7 +195,7 @@
       "name": "Red Blossom Tea Company",
       "address": "831 Grant Ave, San Francisco, CA 94108",
       "star": "⭐️⭐️⭐️⭐️",
-      "price": "💲💲",
+      "price": "💰💰",
       "image": "https://s3-media0.fl.yelpcdn.com/bphoto/g5YF2460OMasP_WOcRuOVw/o.jpg"
     },
     {
@@ -222,7 +222,7 @@
       "name": "Japanese Tea Garden",
       "address": "75 Hagiwara Tea Garden Dr, San Francisco, CA 94118",
       "star": "⭐️⭐️⭐️⭐️",
-      "price": "💲",
+      "price": "💰",
       "image": "https://s3-media0.fl.yelpcdn.com/bphoto/LFkZR1ryGLWar2eFkT4TxA/o.jpg"
     },
     {
@@ -269,16 +269,6 @@
       "star": "⭐️⭐️⭐️⭐️",
       "price": "💰💰",
       "image": "https://s3-media0.fl.yelpcdn.com/bphoto/I95QshhAH6nZGlCWHEYtCQ/o.jpg"
-    },
-    {
-      "city": "Las Vegas, NV",
-      "name": "Best tea shop",
-      "address": "123 Main Street",
-      "star": "⭐️⭐️⭐️⭐️",
-      "price": "💰💰💰💰💰",
-      "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201903/chaiiwalalondon_0.png?ubCqJykNloW58dP7TfCzaYAEQf1dLsqr&size=770:433",
-      "content": "Too expensive!!!!! Oh no..my wallet...",
-      "id": 31
     }
   ]
 }

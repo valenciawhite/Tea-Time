@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400&family=Supermercado+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400&family=Supermercado+One&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Averia Serif Libre", cursive;
+  font-family: 'Averia Serif Libre', cursive;
   background-color: #071d13;
   color: white;
 }
@@ -29,7 +29,7 @@ body {
   justify-content: space-around;
   align-items: center;
   height: 18vh;
-  background: #0a2018;
+  background: #071d13;
 }
 
 .Nav h1 {
@@ -43,7 +43,7 @@ body {
   text-align: right;
   margin-right: 50px;
   /* position: fixed; */
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .nav-links li,
@@ -61,7 +61,6 @@ a {
 .nav-links li:hover {
   color: #4f725d;
 }
-
 .About h1 {
   z-index: 100;
   position: absolute;
@@ -101,6 +100,20 @@ a {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  margin-left: 58px;
+}
+.searchbar:after {
+  content: '';
+  background-color: #446451;
+}
+
+.searchbar h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.searchbar input {
+  font-size: 20px;
+  width: 14rem;
 }
 
 .logo {
@@ -109,51 +122,33 @@ a {
   text-shadow: 0 0 0 var(--green);
 }
 
-.Developer-Info h1 {
-  color: white;
-  margin-top: 30px;
-  font-size: 2rem;
-}
-
-.Developer-Info p {
-  color: white;
-  margin: 30px;
-  /* margin-top: 30px; */
-  text-align: center;
-  font-size: 1.2rem;
-}
-.Developer-Info img {
-  margin-top: 40px;
-  height: auto;
-  max-width: 100%;
-}
-
 .TeaReviewForm {
-  border: 3px solid white;
+  border: 2px solid white;
 }
 
 .TeaReviewForm h1 {
-  font-family: "Averia Serif Libre", cursive;
+  font-family: 'Averia Serif Libre', cursive;
   font-size: 2.5rem;
   text-align: center;
-  margin: 30px;
+  margin: 10px;
 }
 .TeaReviewForm input,
 select,
 textarea {
-  font-family: "Averia Serif Libre", cursive;
+  font-family: 'Averia Serif Libre', cursive;
   font-size: 18px;
   text-align: center;
   display: block;
   margin: auto;
-  padding: 10px;
+  padding: 15px;
   width: 28rem;
   height: 3rem;
   box-sizing: border-box;
+  margin-top: 10px;
 }
 
 .TeaReviewForm button {
-  font-family: "Averia Serif Libre", cursive;
+  font-family: 'Averia Serif Libre', cursive;
   color: white;
   margin: 20px;
   font-size: 16px;
@@ -161,7 +156,7 @@ textarea {
   letter-spacing: 1px;
   padding: 10px 20px 13px;
   margin: 45px;
-  left: 36rem;
+  left: 37rem;
   outline: 0;
   border: 1px solid white;
   cursor: pointer;
@@ -172,7 +167,7 @@ textarea {
 }
 
 .TeaReviewForm button:after {
-  content: "";
+  content: '';
   background-color: #446451;
   width: 100%;
   z-index: -1;
@@ -192,32 +187,196 @@ textarea {
   list-style: none;
 }
 
+.TeaPage {
+  border: 2px solid white;
+}
+
+.tea-card-container {
+  background-color: #446451;
+  border-radius: 5%;
+  border: 3px solid white;
+  padding: 20px;
+  margin-bottom: 10px;
+}
 .card {
-  margin: 1rem;
-  font-size: 20px;
+  margin: 2rem;
+  margin-right: 50px;
+  margin-left: 70px;
+  font-size: 18px;
+  display: inline-block;
+  text-align: center;
 }
 
 .card img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  width: 375px;
+  height: 350px;
+  border-radius: 5%;
+  margin-bottom: 15px;
   text-align: center;
-  font-size: 30px;
-  /* float: left; */
-  font-weight: bold;
-  shape-outside: circle();
-  background-color: Green;
   color: white;
+  border: 2px solid white;
 }
-
-/* .card button {
-  margin-top: 0.5rem;
-} */
 
 .primary {
-  background-color: var(--green);
+  font-family: 'Averia Serif Libre', cursive;
   color: white;
-  margin: 1rem;
+  background-color: var(--green);
   font-size: 20px;
+  border: 1px solid white;
+  letter-spacing: 2px;
+  padding: 10px 13px 13px;
+  margin: 10px;
+  cursor: pointer;
 }
 
+.primary:hover {
+  background-color: #446451;
+}
+
+.Home {
+  border: 2px solid white;
+}
+
+.Home img {
+  border-radius: 5%;
+  margin-top: 50px;
+  margin-right: 75px;
+  /* margin-bottom: 160px; */
+  padding: 1px;
+  display: inline;
+  position: relative;
+  right: -50px;
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+}
+.Home h3 {
+  display: inline-block;
+  margin-right: 158px;
+  margin-top: 35px;
+  margin-left: 250px;
+}
+
+.home-button {
+  font-family: 'Averia Serif Libre', cursive;
+  color: white;
+  margin: 20px;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 10px 20px 13px;
+  margin: 45px;
+  left: 14rem;
+  outline: 0;
+  border: 1px solid white;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  touch-action: manipulation;
+  margin-right: 444px;
+  margin-top: 45px;
+  margin-left: -50px;
+}
+.home-button:after {
+  content: '';
+  background-color: #446451;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.home-button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.about-container {
+  z-index: 100;
+  position: absolute;
+  background-color: #4f725d;
+  border: 3px solid white;
+  width: 300px;
+  height: 675px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  left: 140vh;
+  top: 67vh;
+}
+.about-h3 {
+  color: white;
+  z-index: 100;
+  font-size: 25px;
+  position: absolute;
+  left: 6.5vh;
+}
+
+.about-container h4 {
+  margin-top: 15vh;
+  font-size: 30px;
+  min-width: 31.4vh;
+  border: 3px dashed white;
+  padding-left: 58px;
+}
+.about-container ul {
+  margin-top: 40vh;
+  margin-left: -30vh;
+  list-style: none;
+  font-size: 25px;
+  min-width: 180px;
+  text-align: center;
+}
+.about-container-2 {
+  z-index: 100;
+  position: absolute;
+  background-color: #4f725d;
+  border: 3px solid white;
+  width: 300px;
+  height: 675px;
+  display: flex;
+  align-items: center;
+  left: 97.5vh;
+  top: 67vh;
+}
+.about-h3-2 {
+  color: white;
+  z-index: 100;
+  font-size: 25px;
+  position: absolute;
+  left: 10vh;
+}
+
+.about-container-2 h4 {
+  margin-top: 15vh;
+  font-size: 30px;
+  min-width: 31.4vh;
+  border: 3px dashed white;
+  padding-left: 58px;
+}
+.about-container-2 ul {
+  margin-top: 40vh;
+  margin-left: -30vh;
+  list-style: none;
+  font-size: 25px;
+  min-width: 180px;
+  text-align: center;
+  margin-left: -235px;
+}
+
+.about-image {
+  z-index: 100;
+  position: relative;
+  border-radius: 50%;
+  height: 285px;
+  width: 250px;
+  border: 3px dashed white;
+  top: 48vh;
+  left: 84.5vh;
+  margin-left: 150px;
+  cursor: crosshair;
+}

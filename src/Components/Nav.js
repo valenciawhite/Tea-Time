@@ -1,4 +1,3 @@
-import reactRouterDom from 'react-router-dom';
 import './App.css';
 import { Link } from 'react-router-dom';
 
@@ -13,23 +12,20 @@ function Nav() {
       <header>
       <h1>
         Tea Time
-        {/* <span className="logo" role="img">
-          🌱
-        </span> */}
       </h1>
       <nav>
         <ul className="nav-links">
         <Link style={navStyle} to='/'>
-            <li>Home</li>
+            <li>Main</li>
           </Link>
-          <Link style={navStyle} to='/about'>
-            <li>About </li>
-          </Link>
-           <Link style={navStyle} to='/tea-shop'>
-            <li>Location</li>
+          <Link style={navStyle} to='/tea-shop'>
+            <li>Find Tea Shops</li>
           </Link>
            <Link style={navStyle} to='/comment'>
-            <li>Comment</li>
+            <li>Leave A Review</li>
+          </Link>
+           <Link style={navStyle} to='/about'>
+            <li>About Us </li>
           </Link>
         </ul>
       </nav>

@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import TeaCard from "./TeaCard";
-import TeaList from "./TeaList";
 
 function TeaReviewForm({setTeas, teas, renderTeas}) {
   const [newCity, setNewCity] = useState("");
@@ -41,7 +39,7 @@ function TeaReviewForm({setTeas, teas, renderTeas}) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert("Please check out your comment!")
+    alert("Thank You For Your Submission! Check It Out!")
     window.location.href='/tea-shop'
     // window.open('/tea-shop');
 
@@ -69,27 +67,28 @@ function TeaReviewForm({setTeas, teas, renderTeas}) {
     <div className="TeaReviewForm">
       <h1>Help us find more shops 🌱 </h1>
       <h1>We would love to hear from you! </h1>
+      <br/>
 
       <form onSubmit={handleSubmit}>
         <select onChange={handleNewCity}>
-        <option>select a city</option> 
+        <option>Select a City</option> 
         <option>Austin, TX</option><option>Atlanta, GA</option><option>Baltimore, MD</option><option>Boston, MA</option><option>Charlotte, NC</option><option>Chicago, IL</option> <option>Dallas, TX</option> <option>Denver, CO</option><option>Detroit, MI</option><option>Houston, TX</option><option>Indianapolis, IN</option><option>Kansas City, MO</option><option>Las Vegas, NV</option><option>Los Angeles, CA </option>
         <option>Miami, FL</option><option>Milwaukee, WI</option><option>Minneapolis, MN</option><option>Nashville, TN</option><option>New York, NY</option> <option>Philadelphia, PA</option> <option>San Francisco, CA</option> <option>St Louis, MO </option><option>Seattle, WA</option><option>Washington DC</option>
         </select>
 
-        <input onChange={handleNewName} type="text" placeholder="tea shop" />
-        <input onChange={handleNewAddress} type="text" name="address" placeholder="address" />
+        <input onChange={handleNewName} type="text" placeholder="Tea Shop Name" />
+        <input onChange={handleNewAddress} type="text" name="Address" placeholder="address" />
       
         <select onChange={handleNewStar}>
 
-        <option>star ⭐️ </option><option>⭐️</option><option>⭐️⭐️</option><option>⭐️⭐️⭐️</option> <option>⭐️⭐️⭐️⭐️</option> <option>⭐️⭐️⭐️⭐️⭐️</option>
+        <option>Rating </option><option>⭐️</option><option>⭐️⭐️</option><option>⭐️⭐️⭐️</option> <option>⭐️⭐️⭐️⭐️</option> <option>⭐️⭐️⭐️⭐️⭐️</option>
         </select>
         
         <select onChange={handleNewPrice}>
-        <option>price 💰 </option><option>💰</option><option>💰💰</option><option>💰💰💰</option> <option>💰💰💰💰</option> <option>💰💰💰💰💰</option>
+        <option>Price</option><option>💰</option><option>💰💰</option><option>💰💰💰</option> <option>💰💰💰💰</option> <option>💰💰💰💰💰</option>
         </select>
-        <input onChange={handleNewImage} type="text" placeholder="image URL" />
-        <textarea onChange={handleNewContent} type="text" placeholder="comment" />
+        <input onChange={handleNewImage} type="text" placeholder="Image URL" />
+        <textarea onChange={handleNewContent} type="text" placeholder="Tell us about your experience..." />
     
         <button type="submit">Submit</button>
        </form>

@@ -1,13 +1,9 @@
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import React, {useState, useEffect} from 'react';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
-import Header from './Header';
 import TeaPage from './TeaPage';
 import Nav from './Nav';
 import TeaReviewForm from './TeaReviewForm';
 import About from './About';
-import DeveloperInfo from './TeaPage';
-import Search from './Search';
 import Home from './Home'
 
 function App() {
