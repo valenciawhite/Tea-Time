@@ -1,11 +1,11 @@
 import React from 'react';
-import About from "./About";
+// import About from "./About";
 import Search from "./Search";
 import TeaList from "./TeaList";
-import TeaReviewForm from "./TeaReviewForm";
-import TeaCard from "./TeaCard";
+// import TeaReviewForm from "./TeaReviewForm";
+// import TeaCard from "./TeaCard";
 import './App.css'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 import {useState, useEffect} from "react";
 

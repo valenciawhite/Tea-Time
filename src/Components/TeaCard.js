@@ -1,70 +1,54 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faThumbsUp as fasFaThumbsUp} from '@fortawesome/free-solid-svg-icons'
+import { faThumbsUp as farFaThumbsUp} from '@fortawesome/free-regular-svg-icons'
+import { faCompass} from '@fortawesome/free-regular-svg-icons'
 
 function TeaCard({ city, name, address, star, price, image, content }) {
   const [recommend, setRecommend] = useState(true);
-  const [share, setShare] = useState(true);
+  // const [share, setShare] = useState(true);
 
-  function handleClick1() {
-    alert("Love to hear 😺");
-    setRecommend(!recommend);
-  }
-
-  function handleClick2() {
-    alert("So sad 😭");
-    setRecommend(!recommend);
-  }
-  function handleShare() {
-    alert("Thank you for sharing 👏");
-    setShare(!share);
+  function handleShare(event){
+    event.preventDefault();
+    window.open(`https://www.google.com/maps/place/${address}`)
   }
 
   function handleComment() {
     window.location.href = "/comment";
   }
 
-//   function renderStars(star){
-//     if(star === "5"){
-//       return "⭐️⭐️⭐️⭐️⭐️"
-//     }else if (star === "4") {
-//       return "⭐️⭐️⭐️⭐️"
-//     }else if (star === "3") {
-//       return "⭐️⭐️⭐️"
-//   }else if (star === "2") {
-//     return "⭐️⭐️"
-// }else if (star === "1") {
-//   return "⭐️"
-// }
-// }
+    function handleClick(){
+    setRecommend(!recommend);
+  }
+
+  const solidLike = <FontAwesomeIcon icon={ fasFaThumbsUp} />;
+  const outlineLike = <FontAwesomeIcon icon={ farFaThumbsUp} />;
+  const compass = <FontAwesomeIcon icon={faCompass} />;
+
 
   return (
     <div className="card">
-      <h4>{city}</h4>
-      <h4>{name}</h4>
+    <div className='tea-card-container'>
+    <img src={image} alt={name}/>
+      <h3>{name}</h3>
       <h4>{address}</h4>
+      <h4>{city}</h4>
       <h4>{star}</h4>
       <h4>{price}</h4>
-      <h4>{content}</h4>
-      <img src={image} alt={name} />
-
+      <h5>{content}</h5>
+    </div>
+      
       {recommend ? (
-        <button onClick={handleClick1} className="primary">
-          ❤️ Love
-        </button>
-      ) : (
-        <button onClick={handleClick2} className="primary">
-          🙅 Dislike
-        </button>
-      )}
+      <button onClick={handleClick} className="primary">
+      {outlineLike} </button>
+    ) : (
+    <button onClick={handleClick} className="primary">{solidLike}</button>
+   )}
 
-      {share ? (
-        <button onClick={handleShare} className="primary">
-          🤝 Share
-        </button>
-      ) : (
-        <button onClick={handleShare} className="primary">
-          ✨ Shared
-        </button>
-      )}
+   <button onClick={handleShare} className="primary">
+    {compass} Directions
+     </button>
+
       <button onClick={handleComment} className="primary">
         {" "}
         📝 Comment
@@ -74,3 +58,4 @@ function TeaCard({ city, name, address, star, price, image, content }) {
 }
 
 export default TeaCard;
+
